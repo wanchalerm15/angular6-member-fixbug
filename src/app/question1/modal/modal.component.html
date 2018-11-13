@@ -1,0 +1,48 @@
+<div class="card">
+    <h4 class="card-header">
+        เลือกข้อความไปใส่ไปใส่ที่ Input
+    </h4>
+    <div class="card-body">
+        <div class="form-group">
+            <label for="button-modal">Click open modal :</label>
+            <button type="button" id="button-modal" class="btn btn-primary btn-block" (click)="openModal(lgModal)">
+                Create template modal
+            </button>
+        </div>
+    </div>
+</div>
+
+<div bsModal #lgModal="bs-modal" class="modal" tabindex="-1" role="dialog" aria-labelledby="dialog-sizes-name1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title pull-left">เลือกข้อมูลที่จะเอาไปใส่ Form</h4>
+                <button type="button" class="close pull-right" aria-label="Close" (click)="modal.hide()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>ข้อความ</th>
+                                <th>เลือก</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let item of items">
+                                <td>{{ item.title }}</td>
+                                <td>
+                                    <button (click)="onSelectMessage(item)" class="btn btn-warning btn-sm" type="button">
+                                        เลือกข้อความ
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
