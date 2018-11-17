@@ -1,3 +1,26 @@
-<p>
-  question2 works!
-</p>
+<div class="card">
+    <h4 class="card-header">
+        การรับค่าจาก CKEDITOR
+    </h4>
+    <div class="card-body">
+        <div class="row">
+            <form class="col" (submit)="onSubmit()">
+                <div class="form-group">
+                    <label for="editor">Editor :</label>
+                    <textarea id="editor" class="form-control" rows="10"></textarea>
+                </div>
+
+                <div class="row">
+                    <div class="col-9"></div>
+                    <div class="col-3">
+                        <div class="form-group">
+                            <button class="btn btn-warning btn-block" type="submit">
+                                บันทึกข้อมูล
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
